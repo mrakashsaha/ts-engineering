@@ -66,6 +66,6 @@ const getError = (msg:string) : never => {
     
 }
 
-const a : never = getError("This is the msg");
+// const a : never = getError("This is the msg");
 
 
