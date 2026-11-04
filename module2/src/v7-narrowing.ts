@@ -62,13 +62,3 @@ const showAddress = (user: User) => {
 
 }
 
-
-// Equality
-
-
-// In Operator
-
-// Instanceof Check
-
-
-// Discriminated union
