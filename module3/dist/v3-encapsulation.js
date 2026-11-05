@@ -12,7 +12,7 @@ class Employee {
     //     this.name = name;
     //     this.baseSalary = baseSalary;
     // }
-    // Shorthand of above============
+    // Shorthand of above============>
     constructor(name, _baseSalary) {
         this.name = name;
         this._baseSalary = _baseSalary;

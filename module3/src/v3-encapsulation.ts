@@ -4,7 +4,6 @@
 // private => we cannot access it from outside of the class
 // protected => we cannot use it ouside of the class, but if a class inherit another class then we can use it
 
-
 // readonly access modifier => we only can see
 
 class Employee {
@@ -17,7 +16,8 @@ class Employee {
     //     this.baseSalary = baseSalary;
     // }
 
-    // Shorthand of above============
+    // Shorthand of above============>
+
     constructor(
         public name: string,
         private _baseSalary: number,
@@ -62,5 +62,4 @@ console.log(e1.baseSalary);
 console.log(e1.salaryWithBonus);
 
 // Need to call the method with bracket ();
-
 console.log(e1.getSalaryWithBonus2());
