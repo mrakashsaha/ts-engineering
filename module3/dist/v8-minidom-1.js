@@ -1,0 +1,57 @@
+class UIElement {
+    id;
+    constructor(id) {
+        this.id = id;
+    }
+}
+class Input extends UIElement {
+    type;
+    placeholder;
+    constructor(id, type, placeholder) {
+        super(id);
+        this.type = type;
+        this.placeholder = placeholder;
+    }
+    render() {
+        return `<input id = "${this.id}" type = "${this.type}" name = "${this.id}" placeholder= "${this.placeholder}"/>`;
+    }
+}
+class Button extends UIElement {
+    label;
+    constructor(id, label) {
+        super(id);
+        this.label = label;
+    }
+    render() {
+        return `<button id="${this.id}">${this.label}</button>`;
+    }
+}
+class Form extends UIElement {
+    children = [];
+    appendChild(child) {
+        this.children.push(child);
+    }
+    // constructor (id: string) {
+    //     super (id)
+    // }
+    // We donot need to write these line base it match with parent constructor.
+    render() {
+        const childrenHTML = this.children.map(child => child.render()).join("\n");
+        return `<form style="border: 1px solid #ccc; padding: 20px; display: flex; flex-direction: column; max-width: 300px; border-radius: 10px; gap: 5px;" id =${this.id}>\n${childrenHTML}\n</form>`;
+    }
+}
+const formElement = new Form("login-form");
+const emailInput = new Input("email", "email", "Enter your Email");
+const passwordInput = new Input("password", "password", "Enter your Password");
+const submitButton = new Button("submit-btn", "Submit");
+// console.log(emailInput.render());
+// console.log(passwordInput.render());
+// console.log(submitButton.render());
+formElement.appendChild(emailInput);
+formElement.appendChild(passwordInput);
+formElement.appendChild(submitButton);
+const rootElement = document.getElementById("root");
+if (rootElement) {
+    rootElement.innerHTML = formElement.render();
+}
+export {};
