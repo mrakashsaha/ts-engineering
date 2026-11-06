@@ -8,5 +8,8 @@ const initialize = (config) => {
     // some logic will be here
 };
 initialize({ apiKey: "ssasdf", timeOut: "223" });
+const preview = {
+    name: "ABC",
+    description: "EFG",
+};
 export {};
-// Pick Utility Type

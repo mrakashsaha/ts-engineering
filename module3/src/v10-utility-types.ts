@@ -36,3 +36,15 @@ initialize({apiKey: "ssasdf", timeOut: "223"});
 
 
 // Pick Utility Type
+
+interface Product {
+    id: number,
+    name: string,
+    price: number,
+    description: string,
+}
+
+const preview : Pick <Product, "name"|"description">= {
+    name: "ABC",
+    description: "EFG",
+}
