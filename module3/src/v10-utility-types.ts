@@ -48,3 +48,21 @@ const preview : Pick <Product, "name"|"description">= {
     name: "ABC",
     description: "EFG",
 }
+
+// Omit Utility types
+
+interface Employee {
+    id: number;
+    name: string;
+    salary: number;
+    nid: string;
+
+}
+
+ type PublicEmployee = Omit<Employee, "salary" |"nid">
+
+const directoryEntry : Omit<Employee, "salary" | "nid"> = {
+    id: 22,
+    name: "Akash",
+    
+}
