@@ -59,10 +59,31 @@ interface Employee {
 
 }
 
- type PublicEmployee = Omit<Employee, "salary" |"nid">
+type PublicEmployee = Omit<Employee, "salary" |"nid">
 
 const directoryEntry : Omit<Employee, "salary" | "nid"> = {
     id: 22,
     name: "Akash",
     
+}
+
+
+// Record Utility types
+
+// Use for: Object is converted into type
+
+
+type Enviroment = "development" | "staging" | "production";
+
+interface IEnvironment {
+    development: string;
+    staging: string;
+    production: string;
+}
+
+
+const apiURLs : Record<Enviroment, string> = {
+    development: "http",
+    staging: "httpdddd",
+    production: "httpaaa",
 }

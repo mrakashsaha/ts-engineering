@@ -16,4 +16,9 @@ const directoryEntry = {
     id: 22,
     name: "Akash",
 };
+const apiURLs = {
+    development: "http",
+    staging: "httpdddd",
+    production: "httpaaa",
+};
 export {};
